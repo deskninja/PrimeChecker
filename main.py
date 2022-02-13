@@ -15,8 +15,10 @@ def is_prime(prime_candidate):
 
 
 if __name__ == '__main__':
-    for index in range(100):
-        if is_prime(index):
-            print(f'the number {index} is prime')
-        else:
-            print(f'the number {index} is not prime')
+    while(True):
+        user_number = input('enter a number to check: ')
+        try:
+            user_number = int(user_number)
+            print(f'the number {user_number} is', ' prime' if is_prime(user_number) else ' not prime')
+        except:
+            print('enter a valid number')
